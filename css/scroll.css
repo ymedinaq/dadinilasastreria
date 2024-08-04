@@ -1,0 +1,39 @@
+#Box_carrusel{
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    justify-content: space-between;
+    position: relative;
+    left: 15vw;
+    background-color: aqua;
+}
+#Box_carrusel button{
+    margin: 13vw 0;
+    width: 1.2cm;
+    height: 1.2cm;
+}
+#Box_carrusel button img{
+    width: 1cm;
+    height: 1cm;
+    z-index: 100;
+}
+#carrusel{
+    width: 8cm;
+    display: flex;
+    flex-direction: row;
+}
+.carrusel_img{
+    list-style: none;
+}
+.carrusel_img > img, .carrusel_imgOculto > img{
+    width: 25vw;
+    height: 25vw;
+    top: 0;
+}
+.carrusel_imgOculto {
+    opacity: 0;
+    display: none;
+}
+
+
+
