@@ -1,0 +1,219 @@
+header{
+  background-color: black;
+  height: auto;
+  color: white;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+body{
+  width: 100vw;
+  margin: 0;
+  font-family: "Sarabun", Raleway;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+#act_menu{
+  height: 1cm;
+  margin: 35px 1cm;
+  background-color: black;
+  color: white;
+}
+/*Estilos de boton "Contactanos"*/
+#Boton_Contactos{
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  padding-left: 0.5cm;
+  padding-right: 0.5cm;
+  width: auto;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#Boton_Contactos{
+  border: 3px solid rgba(159, 96, 51, 0.918);
+  border-radius: 10px;
+  margin: 1cm;
+  box-shadow: 0 0 50px rgba(159, 96, 51, 0.918);
+}
+
+#Boton_Contactos:hover{
+  background-color: rgba(159, 96, 51, 0.918);
+  color: white;
+}
+#Boton_Contactos img{
+  width: 0.7cm;
+  height: 0.7cm;
+  filter: opacity(1);
+  background-color: white;
+  margin: 0 auto;
+}
+
+#titulo {
+  justify-content: center;
+  display: flex;
+}
+#titulo ul li {
+  list-style: none;
+}
+#titpal1 {
+  font-family: "Sarabun", Raleway;
+  font-weight: bolder;
+  font-size: 80px;
+  position: static;
+}
+
+#titpal2 {
+  font-family: "Bahnschrift Light", sans-serif;
+  font-size: 25px;
+  text-align: right;
+  margin-top: -9px;
+  display: block;
+  position: static;
+}
+
+/* Estilos del menú en su estado inicial*/
+#Menu{
+  margin-top: 3.5cm;
+  list-style: none;
+  background-color: black;
+  color: white;
+  position: absolute;
+  height: auto;
+  opacity: 0;
+  padding-bottom: 3cm;
+  flex-direction: column;
+  z-index: 100;
+}
+/*Aparición de Menú*/
+@keyframes aparecer-menu{
+  0% {opacity: 1; width: 0%; }
+  100% {width: 20%; opacity: 1; }
+}
+
+#Menu.activo{
+  /*Cuando esté activo la clase "activo" se llama la animación
+  aparecer-menu*/
+  animation-name: aparecer-menu;
+  animation-duration:1.2s;
+  animation-fill-mode: forwards;
+}
+/*Desaparición del menú*/
+
+@keyframes desaparecer-menu{
+  0% {width: 20%; opacity: 1;}
+  100% {width: 0%; opacity: 1;}
+}
+#Menu.inactivo{
+  /*Cuando esté activo la clase "activo" se llama la animación
+  aparecer-menu*/
+  animation-name: desaparecer-menu;
+  animation-duration:  1.2s;
+}
+
+
+#Menu li a{
+  display: block;
+  padding-top: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
+/*Textos alternativos*/
+@keyframes retardoFilaContenido{
+  0% {opacity: 0; margin-left: 0px;}
+  100% {opacity: 1; margin-left: 25px; }
+}
+
+.FilaContenido{
+  display: flex;
+  height: auto;
+  opacity: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.FilaContenido{
+  animation: retardoFilaContenido;
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.FilaContenido > p{
+  width: auto;
+  font-weight: lighter;
+  font-size: xx-large;
+}
+.FilaContenido #introduccion{
+  text-align: center;
+}
+.FilaContenido img{
+  width: 6cm;
+  height: 6cm;
+  padding: calc(100vw/8);
+}
+
+/*Estilos de linea horizontal del titulo "Nuestros servicios"*/
+
+@keyframes retardo {
+  0% { opacity: 0;}
+  100%{ opacity: 1;}
+}
+
+#Linea-Servicios {
+  margin: auto auto;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+
+  animation: retardo;
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#Linea-Servicios h1{
+  position: static;
+  flex-shrink: 0; 
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1.5cm;
+}
+.linea{
+  border-radius: 10px;
+  background-color: black;
+  border: 2px solid;
+  height: 1px;
+  flex-grow: 1;
+  margin: auto auto;
+}
+
+/*Estilos mensajes de "Nuestros servicios"*/
+.ColumnaContenido{
+  opacity: 0;
+  display: flex;
+  font-size: xx-large;
+  height: auto;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  animation: retardoFilaContenido;
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+  margin-right: 25px;
+}
+
+
+
+
+
+
